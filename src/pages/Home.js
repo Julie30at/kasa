@@ -1,8 +1,12 @@
+import { Header, Banner, Gallery, Footer } from "../components"
 
-export function Home(){
+export function Home() {
     return (
     <div>
-     <p>we are home page</p>
-    </div>)
-
+     <Header />
+     <Banner />
+     <Gallery />
+     <Footer />
+    </div>
+)
 }

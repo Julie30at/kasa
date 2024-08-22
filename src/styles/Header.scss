@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    width: 1240px;
+    align-items: center;
+    height: 68px;
+    justify-content: center;
+    gap: 720.678px;
+    margin-top: 45px;
+    margin-bottom: 50px;
+
+    img {
+        width: 210.322px;
+    }
+    
+    .link {
+        display: flex;
+        gap: 57px;
+
+        .active {
+            text-decoration: none;
+        }
+    }
+}
