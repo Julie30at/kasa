@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/location" element={<Rental />} />
+        <Route path="/Rental/:title" element={<Rental />} />{' '}
       </Routes>
     </Router>
   );

@@ -1,4 +1,5 @@
 import Data from '../data/data.json';
+import "../styles/Tags.scss"
 
 export function Tags() {
   const [firstItem] = Data;
@@ -10,9 +11,9 @@ export function Tags() {
   return (
     <div className="tags">
       {firstItem.tags.map((tag, index) => (
-        <span key={index} className="tag">
+        <button key={index} className="tag">
           {tag}
-        </span>
+        </button>
       ))}
     </div>
   );

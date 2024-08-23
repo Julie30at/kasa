@@ -1,14 +1,17 @@
 import StarEmpty from '../assets/greyStar.png';
 import StarFilled from '../assets/redStar.png';
+import "../styles/Rating.scss"
 
 export function Rating({ rating }) {
- 
+  // Vérifiez que rating est un nombre et qu'il est dans la plage attendue
+  const normalizedRating = Math.min(Math.max(rating, 0), 5);
+
   const getStarImage = (index) => {
-    return index < rating ? StarFilled : StarEmpty;
+    return index < normalizedRating ? StarFilled : StarEmpty;
   };
 
   return (
-    <div>
+    <div className='rating'>
       {Array(5)
         .fill(null)
         .map((_, index) => (
@@ -16,7 +19,6 @@ export function Rating({ rating }) {
             key={index}
             src={getStarImage(index)}
             alt="star"
-            style={{ width: '24px', height: '24px' }}
           />
         ))}
     </div>

@@ -16,6 +16,9 @@
         font-size: 24px;
         font-weight: 700;
         border-radius: 5px;
+        &.expanded {
+            margin-bottom: 0px;
+        }
     }
     &_content {
         width: 98%;
