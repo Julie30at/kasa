@@ -4,15 +4,17 @@ import "../styles/Header.scss"
 
 export function Header() {
   return (
-    <header className="header">
-      <img src={logo} alt="logo" />
-      <div className="link ">
-        <NavLink to={'/'} className="active ">
-          Accueil
-        </NavLink>
-        <NavLink to={'/about'} className="active">
-          A propos
-        </NavLink>
+    <header className="header_container">
+      <div className="header">
+        <img src={logo} alt="logo" />
+        <div className="link ">
+          <NavLink to={'/'} className="active ">
+            Accueil
+          </NavLink>
+          <NavLink to={'/about'} className="active">
+            A propos
+          </NavLink>
+        </div>
       </div>
     </header>
   );

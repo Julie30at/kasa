@@ -32,7 +32,7 @@ export function About() {
   return (
     <div className="about">
       <Header />
-      <Banner />
+      <Banner aboutPage={true} />
       <main className="about_main">
         {aboutDatas.map((data) => {
           return (

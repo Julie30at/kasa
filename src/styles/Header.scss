@@ -1,12 +1,20 @@
+.header_container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+
 .header {
     display: flex;
-    width: 1240px;
-    align-items: center;
+    width: 90%;
     height: 68px;
-    justify-content: center;
-    gap: 720.678px;
+    justify-content:  space-between;
     margin-top: 45px;
     margin-bottom: 50px;
+    background-color: aqua;
+    align-items: center;
+  
 
     img {
         width: 210.322px;
@@ -14,10 +22,12 @@
     
     .link {
         display: flex;
+        background-color: bisque;
         gap: 57px;
+       font-size: 25px;
 
         .active {
             text-decoration: none;
         }
     }
-}
+}}
