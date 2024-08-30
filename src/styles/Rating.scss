@@ -1,7 +1,31 @@
+/* Rating.scss */
 .rating {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            width: 24.75px;
-            height: 24px;
-     }
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.star {
+  width: 20px; /* Taille de l'étoile */
+  height: 20px;
+  margin-right: 5px; /* Espace entre les étoiles */
+  position: relative;
+  display: inline-block;
+  background-image: url('../assets/greyStar.png'); /* Image d'étoile grise en arrière-plan */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.filled::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FF6060; /* Couleur rouge */
+  mask: url('../assets/greyStar.png') no-repeat center;
+  -webkit-mask: url('../assets/greyStar.png') no-repeat center;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+}

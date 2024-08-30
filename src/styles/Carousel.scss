@@ -1,20 +1,23 @@
 .carousel {
   position: relative;
-  max-width: 100%;
-  height: auto;
+  width: 90%;
+  height: 415px;
   overflow: hidden;
-}
+  margin-left: 5%;
+  border-radius: 25px;
+  margin-top: 20px;
 
-.carousel_image {
+&_image {
   width: 100%;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
-.carousel_button {
+&_button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
   color: white;
   border: none;
   padding: 10px;
@@ -27,6 +30,7 @@
 
   &-right {
     right: 10px;
+    background-color: transparent;
   }
 
   &:hover {
@@ -34,7 +38,7 @@
   }
 }
 
-.carousel_dots {
+&_dots {
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -43,7 +47,7 @@
   gap: 5px;
 }
 
-.carousel_dot {
+&_dot {
   width: 10px;
   height: 10px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -53,4 +57,5 @@
   &.active {
     background-color: white;
   }
+}
 }
