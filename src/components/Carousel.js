@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
-import '../styles/Carousel.scss'; 
+import '../styles/Carousel.scss';
 import arrowLeft from '../assets/arrow_left.png';
 import arrowRight from '../assets/arrow_right.png';
 
-export function Carousel({images}) {
-
-   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+export function Carousel({ images }) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
   const prevImage = () => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1,
     );
   };
 
@@ -23,28 +22,40 @@ export function Carousel({images}) {
     setCurrentImageIndex(index);
   };
 
-   return (
+  return (
     <div className="carousel">
-      <button className="carousel_button carousel_button-left" onClick={prevImage}>
-        <img src={arrowLeft} alt="Précédent" className="carousel_arrow" />
-      </button>
+      {images.length > 1 && (
+        <button
+          className="carousel_button carousel_button-left"
+          onClick={prevImage}
+        >
+          <img src={arrowLeft} alt="Précédent" className="carousel_arrow" />
+        </button>
+      )}
       <img
         src={images[currentImageIndex]}
         alt={`Kasa - ${currentImageIndex + 1}`}
         className="carousel_image"
       />
-      <button className="carousel_button carousel_button-right" onClick={nextImage}>
-        <img src={arrowRight} alt="Suivant" className="carousel_arrow" />
-      </button>
-      <div className="carousel_dots">
-        {images.map((_, index) => (
-          <span
-            key={index}
-            className={`carousel_dot ${index === currentImageIndex ? 'active' : ''}`}
-            onClick={() => goToImage(index)}
-          ></span>
-        ))}
-      </div>
+      {images.length > 1 && (
+        <button
+          className="carousel_button carousel_button-right"
+          onClick={nextImage}
+        >
+          <img src={arrowRight} alt="Suivant" className="carousel_arrow" />
+        </button>
+      )}
+      {images.length > 1 && (
+        <div className="carousel_dots">
+          {images.map((_, index) => (
+            <span
+              key={index}
+              className={`carousel_dot ${index === currentImageIndex ? 'active' : ''}`}
+              onClick={() => goToImage(index)}
+            ></span>
+          ))}
+        </div>
+      )}
     </div>
   );
-};
+}
