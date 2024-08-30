@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import Data from '../data/data.json';
 import '../styles/Rental.scss';
-import { Header, Collapse, Tags, Rating, Footer } from '../components';
+import { Header, Collapse, Tags, Rating, Carousel, Footer } from '../components';
 
 export function Rental() {
   // Utilisation du hook useParams pour récupérer les paramètres de l'URL
@@ -18,7 +18,7 @@ export function Rental() {
   return (
     <div className="rental">
       <Header />
-      <img src={rentalData.coverImage} alt={`Kasa - ${rentalData.title}`} />
+      <Carousel images={rentalData.images} />{' '}
       <h1 className="rental_title">{rentalData.title}</h1>
       <p className="rental_location">{rentalData.location}</p>
       <Tags />
