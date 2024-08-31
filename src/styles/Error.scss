@@ -5,6 +5,10 @@ align-items: center;
 gap: 139px;
 font-family: Montserrat;
 
+@media screen and (max-width: 767px){
+          gap: 113px;
+         }
+
     &_title {
     color: #FF6060;
     text-align: center;
@@ -12,6 +16,10 @@ font-family: Montserrat;
     font-weight: 700;
     margin: 0px;
     margin-top: 100px;
+
+    @media screen and (max-width: 767px){
+          font-size: 96px;
+         }
    }
 
    &_txt{
@@ -19,6 +27,13 @@ font-family: Montserrat;
     font-size: 36px;
     font-weight: 500;
     margin: 0px;
+
+     @media screen and (max-width: 767px){
+          font-size: 18px;
+          text-align: center;
+          margin: 0px 50px;
+          line-height: 142.6%;
+         }
    }
 
    &_link {
@@ -26,5 +41,11 @@ font-family: Montserrat;
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 120px;
+
+    @media screen and (max-width: 767px){
+          font-size: 14px;
+          text-align: center;
+          margin: 0px 40px 110px 40px;
+         }
    }
 }

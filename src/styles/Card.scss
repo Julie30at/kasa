@@ -1,11 +1,16 @@
 .gallery_card{
     position: relative;
-    width: 340px;
+    max-width: 340px;
     height: 340px;
     border-radius: 10px;
     cursor: pointer;
     overflow: hidden;
     margin: 0%;
+
+      @media screen and (max-width: 767px){
+        width: 100%;
+        max-height: 255px;
+     }
 
     img{
         width: 100%;

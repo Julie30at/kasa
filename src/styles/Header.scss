@@ -3,8 +3,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-
-
+    
 .header {
     display: flex;
     width: 90%;
@@ -13,10 +12,21 @@
     margin-top: 45px;
     margin-bottom: 17px;
     align-items: center;
+
+     @media screen and (max-width: 767px){
+     margin-top: 20px;
+     height: 47px;
+     min-width: 100%;
+     margin-left: 30px;
+     }
   
 
     img {
         width: 210.322px;
+
+        @media screen and (max-width: 767px){
+           width: 30%;
+     }
     }
     
     .link {
@@ -26,13 +36,23 @@
         font-family: Montserrat;
         font-weight: 500;
 
-        .active {
-            text-decoration: none;
-            color: black;
+        
+        @media screen and (max-width: 767px){
+           font-size: 12px;
+           text-transform: uppercase;
+           gap: 26px;
+           text-underline-offset: 2px;
+           margin-right: 20px;
+          
+     }
 
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+        a {
+    text-decoration: none; 
+    color: #000; 
+  }
+
+  a.active {
+    text-decoration: underline;
+  }
     }
 }}
