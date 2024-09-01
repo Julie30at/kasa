@@ -1,19 +1,21 @@
-// Importation du composant `Link` depuis `react-router-dom` pour gérer la navigation sans rechargement de la page
-import { Link } from 'react-router-dom';
-
-// Importation des styles spécifiques au composant `Card` depuis un fichier SCSS
+import { useNavigate, Link } from 'react-router-dom';
 import '../styles/Card.scss';
 
-// Définition et exportation du composant fonctionnel `Card`
-// Le composant prend deux propriétés : `title` et `cover`
 export default function Card({ title, cover }) {
-  return (
-    // Le composant `Link` redirige vers une URL dynamique basée sur le titre de la carte
-    <Link to={`/Rental/${title}`} className="gallery_card">
-      {/* Affichage de l'image avec la source provenant de la propriété `cover` et une description alternative dynamique */}
-      <img src={cover} alt={`Kasa - ${title}`} />
+  const navigate = useNavigate();
+  
+  const isValidTitle = (title) => {
+    return title && title.trim().length > 0;
+  };
 
-      {/* Affichage du titre de la carte dans une balise <h3> */}
+  if (!isValidTitle(title)) {
+    navigate('/error'); 
+    return null;
+  }
+
+  return (
+    <Link to={`/Rental/${title}`} className="gallery_card">
+      <img src={cover} alt={`Kasa - ${title}`} />
       <h3>{title}</h3>
     </Link>
   );
