@@ -4,13 +4,9 @@ import '../styles/Rental.scss';
 import { Header, Collapse, Tags, Rating, Carousel, Footer } from '../components';
 
 export function Rental() {
-  // Utilisation du hook useParams pour récupérer les paramètres de l'URL
   const { title } = useParams();
-
-  // Recherche des données correspondantes dans le fichier JSON
   const rentalData = Data.find((item) => item.title === title);
 
-  // Gestion du cas où le titre n'est pas trouvé
   if (!rentalData) {
     return <div>Rental not found</div>;
   }
