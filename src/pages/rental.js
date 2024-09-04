@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import Data from '../data/data.json';
 import '../styles/Rental.scss';
 import { Header, Collapse, Tags, Rating, Carousel, Footer } from '../components';
@@ -8,7 +9,7 @@ export function Rental() {
   const rentalData = Data.find((item) => item.title === title);
 
   if (!rentalData) {
-    return <div>Rental not found</div>;
+    return <Navigate to="/error" replace />;
   }
 
   return (
