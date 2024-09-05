@@ -1,12 +1,15 @@
-import { Header, Banner, Gallery, Footer } from "../components"
+import { Header, Banner, Gallery, Footer } from '../components';
+import '../styles/Home.scss';
 
 export function Home() {
-    return (
+  return (
     <div>
-     <Header />
-     <Banner />
-     <Gallery />
-     <Footer />
+      <Header />
+      <div className="homeContainer">
+        <Banner />
+        <Gallery />
+      </div>
+      <Footer />
     </div>
-)
+  );
 }
