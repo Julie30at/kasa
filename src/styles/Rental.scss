@@ -95,6 +95,8 @@
 
           @media screen and (max-width: 767px){
                  flex-direction: column;
+                 gap: 0px;
+                 margin-bottom: 0px;
    }
 
     &_item {

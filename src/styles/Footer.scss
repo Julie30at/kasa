@@ -14,6 +14,7 @@
     @media screen and (max-width: 767px){
             justify-content: center;
             gap: 10px;
+            margin-top: 10px;
          }
    
     &_logo {
@@ -34,6 +35,7 @@
             justify-content: center;
             font-size: 12px;
             line-height: 142.6%;
+            margin: 0px;
          }
     }
 }
