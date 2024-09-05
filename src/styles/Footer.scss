@@ -4,11 +4,12 @@
     align-items: center;
     background-color: black;
     color: white;
-    max-height: 209px;
+    height: 209px;
     justify-content: flex-end;
     gap: 28.556px;
-    min-width: 100%;
-    margin: 0%;
+    width: 100%;
+    margin-top: 25px;
+   
 
     @media screen and (max-width: 767px){
             justify-content: center;

@@ -1,4 +1,5 @@
 import { Header, Banner, Collapse, Footer } from '../components';
+import "../styles/About.scss"
 
 
 export function About() {

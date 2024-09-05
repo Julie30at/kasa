@@ -1,11 +1,13 @@
 .rental {
     font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &_contain {
         display: flex;
         flex-direction: row;
         width: 90%;
-        margin-left: 5%;
         justify-content: space-between;
         align-items: center;
 
@@ -86,6 +88,10 @@
     display: flex;
     flex-direction: row;
     margin: 0px;
+    gap: 76px;
+    width: 90%;
+    margin-bottom: 15px;
+
 
           @media screen and (max-width: 767px){
                  flex-direction: column;
