@@ -1,20 +1,19 @@
-import Data from '../data/data.json';
-import '../styles/Tags.scss';
+import '../styles/Tags.scss'; // Importation des styles CSS spécifiques au composant
 
-export function Tags() {
-
-  const [firstItem] = Data;
-
-  if (!firstItem || !firstItem.tags) {
-    return <div>Aucune information disponible</div>;
+// Le composant prend désormais une prop `tags`
+export function Tags({ tags }) {
+  // Vérifie si la prop `tags` est un tableau non vide
+  if (!Array.isArray(tags) || tags.length === 0) {
+    return <div className='tag'>Aucune information disponible</div>; // Affiche un message si les tags ne sont pas disponibles ou ne sont pas un tableau
   }
 
   return (
     <div className="tags">
-      {firstItem.tags.map((tag, index) => (
-        <button key={index} className="tag">
+      {/* Itération sur les tags et création d'un bouton pour chaque tag */}
+      {tags.map((tag, index) => (
+        <div key={tag + index} className="tag">
           {tag}
-        </button>
+        </div>
       ))}
     </div>
   );

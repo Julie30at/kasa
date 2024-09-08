@@ -4,21 +4,22 @@
 }
 
 .tag {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FF6060;
-    width: 115px;
-    height: 25px;
-    color: white;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 5px 15px;
     border-radius: 10px;
-    padding: 10px 5px;
-    border: none;
+    color: white;
+    background-color: #FF6060;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
+    min-width: 115px; 
+    text-align: center; 
+}
 
-     @media screen and (max-width: 767px){
-            font-size: 10px;
-            
-   }
+@media screen and (max-width: 767px) {
+    .tag {
+        font-size: 10px;
+        min-width: 84px;
+    }
 }

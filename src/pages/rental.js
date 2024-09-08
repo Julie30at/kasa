@@ -20,12 +20,13 @@ export function Rental() {
         <div className="rental_info">
           <h1 className="rental_title">{rentalData.title}</h1>
           <p className="rental_location">{rentalData.location}</p>
-          <Tags />
+          <Tags tags={rentalData.tags || []} />{' '}
         </div>
         <div className="rental_host">
           <div className="rental_host_info">
             <h2 className="rental_host_name">{rentalData.host.name}</h2>
-            <img className='rental_host_name_img'
+            <img
+              className="rental_host_name_img"
               src={rentalData.host.image}
               alt={`Kasa - ${rentalData.host.name}`}
             ></img>
