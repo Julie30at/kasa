@@ -20,7 +20,8 @@
         height: 111px;
         border-radius: 10px;
         margin-bottom: 22px;
-        width: 85%;
+        width: 94%;
+        padding: 0;
         justify-content: start;
       }
 
@@ -33,7 +34,8 @@
 
          @media screen and (max-width: 767px){
             font-size: 24px;
-            
+            margin-left: 16px;
+
          }
     }
 }

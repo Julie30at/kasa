@@ -56,11 +56,12 @@
         &_info {
             display: flex;
             align-items: center;
-            gap: 10px;
             margin-bottom: 10px;
+            justify-content: end;
         }
 
         &_name {
+            width: 50%;
             color: #FF6060;
             font-size: 18px;
             font-weight: 500;
