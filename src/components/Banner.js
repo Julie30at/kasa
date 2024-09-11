@@ -1,10 +1,15 @@
 import '../styles/Banner.scss';
 
-export function Banner({aboutPage}) {
-  
+export function Banner({ aboutPage, backgroundImage, title }) {
+  const getBannerStyle = () => ({
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, ${aboutPage ? '0.3' : '0.6'}), rgba(0, 0, 0, ${
+      aboutPage ? '0.3' : '0.6'
+    })), url(${backgroundImage})`,
+  });
+
   return (
-    <section className={aboutPage ? 'banner_about' : 'banner'}>
-      {!aboutPage && <h2>Chez vous, partout et ailleurs</h2>}
+    <section className="banner" style={getBannerStyle()}>
+      {!aboutPage && <h2>{title}</h2>}
     </section>
   );
 }

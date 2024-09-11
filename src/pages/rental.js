@@ -15,12 +15,12 @@ export function Rental() {
   return (
     <div className="rental">
       <Header />
-      <Carousel images={rentalData.images} />{' '}
+      <Carousel images={rentalData.images} />
       <div className="rental_contain">
         <div className="rental_info">
           <h1 className="rental_title">{rentalData.title}</h1>
           <p className="rental_location">{rentalData.location}</p>
-          <Tags tags={rentalData.tags || []} />{' '}
+          <Tags tags={rentalData.tags || []} />
         </div>
         <div className="rental_host">
           <div className="rental_host_info">

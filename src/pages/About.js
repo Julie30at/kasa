@@ -1,4 +1,5 @@
 import { Header, Banner, Collapse, Footer } from '../components';
+import aboutPicture from '../assets/AboutPicture.png';
 import "../styles/About.scss"
 
 
@@ -33,15 +34,12 @@ export function About() {
   return (
     <div className="about">
       <Header />
-      <Banner aboutPage={true} />
+      <Banner aboutPage backgroundImage={aboutPicture} />
       <main className="about_main">
         {aboutDatas.map((data) => {
           return (
             <div key={data.id} className="about_main_collapse">
-              <Collapse
-                title={data.title}
-                content={data.content}
-              />
+              <Collapse title={data.title} content={data.content} />
             </div>
           );
         })}

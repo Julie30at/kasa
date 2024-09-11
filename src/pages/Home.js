@@ -1,4 +1,5 @@
 import { Header, Banner, Gallery, Footer } from '../components';
+import homePicture from '../assets/HomePicture.png';
 import '../styles/Home.scss';
 
 export function Home() {
@@ -6,7 +7,10 @@ export function Home() {
     <div>
       <Header />
       <div className="homeContainer">
-        <Banner />
+        <Banner
+          backgroundImage={homePicture}
+          title="Chez vous, partout et ailleurs"
+        />
         <Gallery />
       </div>
       <Footer />
