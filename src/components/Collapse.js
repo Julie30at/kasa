@@ -15,9 +15,7 @@ export function Collapse({ title, content }) {
 
   return (
     <div className={`collapse ${isExpanded}`}>
-      {' '}
       <h3 className={`collapse_title ${isExpanded}`}>
-        {' '}
         {title} 
         <img
           className={`arrow ${arrowDirection}`} 
@@ -35,7 +33,7 @@ export function Collapse({ title, content }) {
         <div className="collapse_content" ref={contentRef}>
           {Array.isArray(content)
             ? content.map((item, index) => <p key={index}>{item}</p>) 
-            : content}{' '}
+            : content}
         </div>
       </div>
     </div>
