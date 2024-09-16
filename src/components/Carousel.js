@@ -20,13 +20,8 @@ export function Carousel({ images }) {
     );
   };
 
-  const goToImage = (index) => {
-    setCurrentImageIndex(index);
-  };
-
   return (
     <div className="carousel">
-
       {hasMultipleImages && (
         <button
           className="carousel_button carousel_button-left"
@@ -37,30 +32,23 @@ export function Carousel({ images }) {
       )}
 
       <img
-        src={images[currentImageIndex]} 
-        alt={`Kasa - ${currentImageIndex + 1}`} 
-        className="carousel_image" 
+        src={images[currentImageIndex]}
+        alt={`Kasa - ${currentImageIndex + 1}`}
+        className="carousel_image"
       />
 
       {hasMultipleImages && (
         <button
           className="carousel_button carousel_button-right"
-          onClick={nextImage} 
+          onClick={nextImage}
         >
           <img src={arrowRight} alt="Suivant" className="carousel_arrow" />
         </button>
       )}
 
       {hasMultipleImages && (
-
-        <div className="carousel_dots">
-          {images.map((_, index) => (
-            <span
-              key={index} 
-              className={`carousel_dot ${index === currentImageIndex ? 'active' : ''}`} 
-              onClick={() => goToImage(index)} 
-            ></span>
-          ))}
+        <div className="carousel_counter">
+          {currentImageIndex + 1} / {images.length}
         </div>
       )}
     </div>
