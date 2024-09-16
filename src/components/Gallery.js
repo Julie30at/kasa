@@ -9,9 +9,9 @@ export function Gallery() {
         return (
           <Card
             key={data.id}
-            id={data.id}
-            title={data.title}
-            cover={data.coverImage}
+            id={data.id} 
+            title={data.title} 
+            cover={data.coverImage} 
           />
         );
       })}

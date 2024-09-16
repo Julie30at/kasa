@@ -5,8 +5,9 @@ import '../styles/Rental.scss';
 import { Header, Collapse, Tags, Rating, Carousel, Footer } from '../components';
 
 export function Rental() {
-  const { title } = useParams();
-  const rentalData = Data.find((item) => item.title === title);
+  const { id } = useParams();
+
+  const rentalData = Data.find((item) => item.id === id);
 
   if (!rentalData) {
     return <Navigate to="/error" replace />;
