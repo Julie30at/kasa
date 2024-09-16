@@ -33,7 +33,7 @@ export function About() {
   return (
     <div className="about">
       <Header />
-      <Banner aboutPage backgroundImage={aboutPicture} />
+      <Banner backgroundImage={aboutPicture} />
       <main className="about_main">
         {aboutDatas.map((data) => (
           <div key={data.id} className="about_main_collapse">
